@@ -103,7 +103,7 @@ if(!matchMedia('(prefers-reduced-motion: reduce)').matches)requestAnimationFrame
 
 const twitter=[1,4,7,10,11,12,13,16,17,18,19,20,21,25,26,27,29,30,31,32,34,35,37,38,39,40,41,42,43,44,45,46,47,48,52,53,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,80,83,84,85,87];
 const range=(a,b)=>Array.from({length:b-a+1},(_,i)=>a+i);
-const config=[{id:'Chigua',icon:'✧',names:range(1,46).map(n=>`Chigua${n<=28?' ':''}(${n})`)},{id:'Creamspot',icon:'◈',names:range(1,33).filter(n=>n!==17&&n!==27).map(n=>`cream (${n})`)},{id:'Elles club',icon:'❀',names:range(1,89).map(n=>`Elles (${n})`)},{id:'Soft',icon:'☾',names:range(1,44).map(n=>`Soft${n<=32?' ':''}(${n})`)},{id:'Twitter',icon:'✳',names:twitter.map(n=>`Twitter (${n})`)},{id:'X',icon:'✕',names:range(1,24).filter(n=>n!==15).map(n=>`X (${n})`)}];
+const config=[{id:'Chigua',icon:'✧',names:range(1,46).map(n=>`Chigua${n<=28?' ':''}(${n})`)},{id:'Creamspot',icon:'◈',names:range(1,33).filter(n=>n!==17&&n!==27).map(n=>`cream (${n})`)},{id:'Elles club',icon:'❀',names:range(1,89).map(n=>`Elles (${n})`)},{id:'Soft',icon:'☾',names:range(1,44).map(n=>`Soft${n<=32?' ':''}(${n})`)},{id:'Twitter',icon:'✳︎',names:twitter.map(n=>`Twitter (${n})`)},{id:'X',icon:'✕',names:range(1,24).filter(n=>n!==15).map(n=>`X (${n})`)}];
 const KEY='yingqian_picker_v1';let data;try{data=JSON.parse(localStorage.getItem(KEY)||'null')}catch{};
 if(!data||!data.lists){data={lists:Object.fromEntries(config.map(c=>[c.id,c.names])),history:[],shortcut:'视频查找器 2'}};
 for(const c of config){if(!Array.isArray(data.lists[c.id]))data.lists[c.id]=c.names.slice()};if(!Array.isArray(data.history))data.history=[];if(typeof data.shortcut!=='string')data.shortcut='视频查找器 2';
